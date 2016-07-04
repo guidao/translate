@@ -22,8 +22,10 @@ To use this contribution add it to your =~/.spacemacs=
   (setq-default dotspacemacs-configuration-layers '(translate))
 #+end_src
 
+需要安装sdcv命令
 * Key bindings
 
-| Key Binding     | Description    |
-|-----------------+----------------|
-| ~<SPC> x x x~   | Does thing01   |
+| Key Binding | Description |
+|-------------+-------------|
+| ~C-x t~     | 翻译        |
+|             |             |
