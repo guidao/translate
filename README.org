@@ -23,6 +23,11 @@ To use this contribution add it to your =~/.spacemacs=
 #+end_src
 
 需要安装sdcv命令
+#+BEGIN_SRC shell
+sudo apt-get install sdcv
+#+END_SRC
+然后去http://abloz.com/huzheng/stardict-dic/zh_CN/ 下载词典，推荐下载朗道词典， 放到~/.stardict/dic 目录下解压
+
 * Key bindings
 
 | Key Binding | Description |
