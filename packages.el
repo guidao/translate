@@ -71,5 +71,5 @@ Each entry is either:
   (interactive)
   (let* ((word (read-string "trasnlate word:" (projectile-symbol-at-point)))
          (cmd (concat "sdcv " word)))
-    (pos-tip-show (shell-command-to-string cmd))))
+    (pos-tip-show (shell-command-to-string cmd) nil nil nil 3)))
 
