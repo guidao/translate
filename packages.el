@@ -70,6 +70,6 @@ Each entry is either:
   "翻译英文单词通过sdcv"
   (interactive)
   (let* ((word (read-string "trasnlate word:" (projectile-symbol-at-point)))
-         (cmd (concat "sdcv " word)))
-    (pos-tip-show (shell-command-to-string cmd) nil nil nil 3)))
+         (cmd (concat "sdcv -n " word)))
+    (pos-tip-show (shell-command-to-string cmd) nil nil nil 300)))
 
