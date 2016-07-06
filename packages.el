@@ -72,7 +72,7 @@ Each entry is either:
   (let* ((word (read-string "trasnlate word:" (projectile-symbol-at-point)))
          (cmd (concat "sdcv -n " word))
          (str (shell-command-to-string cmd)))
-    (run-at-time 0.9 nil 'translate/popup str)))
+    (run-at-time 0.4 nil 'translate/popup str)))
 
 (defun translate/popup (str)
   "弹出提示框"
