@@ -70,6 +70,15 @@ Each entry is either:
   "翻译英文单词通过sdcv"
   (interactive)
   (let* ((word (read-string "trasnlate word:" (projectile-symbol-at-point)))
-         (cmd (concat "sdcv " word)))
-    (pos-tip-show (shell-command-to-string cmd) nil nil nil 3)))
+         (cmd (concat "sdcv -n " word))
+         (str (shell-command-to-string cmd)))
+    (run-at-time 0.9 nil 'translate/popup str)))
 
+(defun translate/popup (str)
+  "弹出提示框"
+  (pos-tip-show (translate/read-string str) nil nil nil 3))
+
+(defun translate/read-string (str)
+  "将包含有unicode的字符串转换"
+  (interactive)
+  (eval (car (read-from-string (concat "(format \"%s\"" "\"" str "\"" ")")))))
